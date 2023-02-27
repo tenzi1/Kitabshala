@@ -1,0 +1,78 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: white;
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    color:rgb(8, 128, 150);
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.books{
+    margin: 1.5rem 0 2.5rem 0;
+}
+.card-title {
+    margin-bottom: 0;
+}
+
+.card-text {
+    margin:0;
+}
+
+.price{
+    font-weight: 500;
+}
+
+.card-btn{
+    border: 1px solid grey;
+    width: 100%;
+    margin-top: 1.5rem;
+    outline: none;
+}
+
+.card-btn:hover,
+.card-btn:focus {
+    background-color: rgb(8, 128, 150);
+    color: white;
+    transition: 0.7s;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer{
+    background-color: rgb(8, 128, 150);
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.social-text {
+    font-size: 1.5rem;
+}
+
+.footer-title, .footer-text, .footer-nav a{
+    color: white;
+}
+
+.wrap{
+    padding: 3rem 0;
+}
