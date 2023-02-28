@@ -9,7 +9,7 @@ class Kitab(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     synapsis = models.TextField(blank=True, null=True)
     cover = models.ImageField(upload_to='covers/', blank=True)
-
+    category = models.ForeignKey("Category", on_delete=models.CASCADE, related_name="kitabs", default="Other")
 
     def __str__(self):
         return self.title
@@ -22,4 +22,14 @@ class Kitab(models.Model):
             self.slug = slugify(self.title)
         return super().save(*args, **kwargs)
     
- 
+
+class Category(models.Model):
+    name = models.CharField(max_length=50, blank=True, null=True)
+    
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name_plural = 'Categories'
+
+        
