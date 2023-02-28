@@ -10,78 +10,32 @@
         </div>
 
         <div class="row gx-3">
+            {% for kitab in object_list%}
             <div class="col">
                 <div class="p-3">
                     <div class="" style="width:12rem;">
+                        <a href="{{ kitab.get_absolute_url }}">
                         <img src="https://s3-us-west-2.amazonaws.com/youexec-resources-up/tgr-think-and-grow-rich-by-napoleon-hill-header.jpg"
                             class="card-img-top" alt="..." data-bs-toggle="tooltip" data-bs-placement="top"
-                            title="Tooltip on top">
+                            title="{{ kitab.title }}">
+                            </a>
                         <div>
-                            <h5 class="card-title">Book title</h5>
-                            <p class="card-text">by John Doe</p>
-                            <p class="card-text price">NRS 600</p>
+                            <a class="kitab-detail-link" href="{{ kitab.get_absolute_url }}" style="text-decoration:none;color:black;">
+                            <h5 class="card-title">{{ kitab.title|truncatechars:18}}</h5>
+                            </a>
+                            <p class="card-text"> by {{ kitab.author }}</p>
+                            <p class="card-text price">NRS {{ kitab.price}}</p>
 
                         </div>
+                        
 
                         <a href="#" class="btn card-btn">Add To Cart</a>
                     </div>
 
                 </div>
             </div>
-
-            <div class="col">
-                <div class="p-3">
-                    <div class="" style="width:12rem;">
-                        <img src="https://s3-us-west-2.amazonaws.com/youexec-resources-up/tgr-think-and-grow-rich-by-napoleon-hill-header.jpg"
-                            class="card-img-top" alt="...">
-                        <div>
-                            <h5 class="card-title">Book title</h5>
-                            <p class="card-text">by John Doe</p>
-                            <p class="card-text price">NRS 600</p>
-
-                        </div>
-
-                        <a href="#" class="btn card-btn">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="p-3">
-                    <div class="" style="width:12rem;">
-                        <img src="https://s3-us-west-2.amazonaws.com/youexec-resources-up/tgr-think-and-grow-rich-by-napoleon-hill-header.jpg"
-                            class="card-img-top" alt="...">
-                        <div>
-                            <h5 class="card-title">Book title</h5>
-                            <p class="card-text">by John Doe</p>
-                            <p class="card-text price">NRS 600</p>
-
-                        </div>
-
-                        <a href="#" class="btn card-btn">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="p-3">
-                    <div class="" style="width:12rem;">
-                        <img src="https://s3-us-west-2.amazonaws.com/youexec-resources-up/tgr-think-and-grow-rich-by-napoleon-hill-header.jpg"
-                            class="card-img-top" alt="...">
-                        <div>
-                            <h5 class="card-title">Book title</h5>
-                            <p class="card-text">by John Doe</p>
-                            <p class="card-text price">NRS 600</p>
-
-                        </div>
-
-                        <a href="#" class="btn card-btn">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
+            {% endfor%}
+           </div>
     </div>
 
     <div class="books">
@@ -90,76 +44,31 @@
             <p class="">VIEW ALL</p>
         </div>
         <div class="row gx-3">
-            <div class="col">
-                <div class="p-3">
-                    <div class="" style="width:12rem;">
+        {% for kitab in object_list%}
+        <div class="col">
+            <div class="p-3">
+                <div class="" style="width:12rem;">
+                    <a href="#">
                         <img src="https://s3-us-west-2.amazonaws.com/youexec-resources-up/tgr-think-and-grow-rich-by-napoleon-hill-header.jpg"
                             class="card-img-top" alt="..." data-bs-toggle="tooltip" data-bs-placement="top"
-                            title="Tooltip on top">
-                        <div>
-                            <h5 class="card-title">Book title</h5>
-                            <p class="card-text">by John Doe</p>
-                            <p class="card-text price">NRS 600</p>
-
-                        </div>
-
-                        <a href="#" class="btn card-btn">Add To Cart</a>
+                            title="{{ kitab.title }}">
+                    </a>
+                    <div>
+                        <a class="kitab-detail-link" href="#" style="text-decoration:none;color:black;">
+                            <h5 class="card-title">{{ kitab.title|truncatechars:18}}</h5>
+                        </a>
+                        <p class="card-text"> by {{ kitab.author }}</p>
+                        <p class="card-text price">NRS {{ kitab.price}}</p>
+        
                     </div>
-
+        
+        
+                    <a href="#" class="btn card-btn">Add To Cart</a>
                 </div>
+        
             </div>
-
-            <div class="col">
-                <div class="p-3">
-                    <div class="" style="width:12rem;">
-                        <img src="https://s3-us-west-2.amazonaws.com/youexec-resources-up/tgr-think-and-grow-rich-by-napoleon-hill-header.jpg"
-                            class="card-img-top" alt="...">
-                        <div>
-                            <h5 class="card-title">Book title</h5>
-                            <p class="card-text">by John Doe</p>
-                            <p class="card-text price">NRS 600</p>
-
-                        </div>
-
-                        <a href="#" class="btn card-btn">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="p-3">
-                    <div class="" style="width:12rem;">
-                        <img src="https://s3-us-west-2.amazonaws.com/youexec-resources-up/tgr-think-and-grow-rich-by-napoleon-hill-header.jpg"
-                            class="card-img-top" alt="...">
-                        <div>
-                            <h5 class="card-title">Book title</h5>
-                            <p class="card-text">by John Doe</p>
-                            <p class="card-text price">NRS 600</p>
-
-                        </div>
-
-                        <a href="#" class="btn card-btn">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="p-3">
-                    <div class="" style="width:12rem;">
-                        <img src="https://s3-us-west-2.amazonaws.com/youexec-resources-up/tgr-think-and-grow-rich-by-napoleon-hill-header.jpg"
-                            class="card-img-top" alt="...">
-                        <div>
-                            <h5 class="card-title">Book title</h5>
-                            <p class="card-text">by John Doe</p>
-                            <p class="card-text price">NRS 600</p>
-
-                        </div>
-
-                        <a href="#" class="btn card-btn">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-
+        </div>
+        {% endfor%}
         </div>
     </div>
 </div>

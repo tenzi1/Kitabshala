@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Kitab
+
+@admin.register(Kitab)
+class KitabAdmin(admin.ModelAdmin):
+    list_display = ('title', 'author', 'price', 'slug')
+    prepopulated_fields ={'slug':('title',)}

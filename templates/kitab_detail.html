@@ -1,0 +1,51 @@
+{% extends '_base.html' %}
+
+{% block title%}Kitabshala - Detail {% endblock %}
+
+{% block content %}
+<div>
+    <div class="container p-3">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="book-image-container"><img src="https://pos.booksmandala.com/images/10981"
+                        alt="Veronika decides to die" class="img-fluid cover-pic"></div>
+                <div class="book-tags"></div>
+                
+            </div>
+            <div class="col-md-6 col-12">
+                <h4 class="book-title">{{ kitab.title }}</h4>
+                <h5 class="book-author">
+                    by {{ kitab.author }}</h5>
+
+                <div class="book-description-new m-0">
+                    <h5 class="mt-0 mb-3">Synopsis</h5>
+                    <p class="text-justify">
+                    <div>
+                        <p>Veronika seems to have everything she could wish for. She is young and pretty, has plenty of
+                            attractive boyfriends, goes dancing, has a steady job, a loving family, Yet Veronika is not
+                            happy; something is lacking in her life. On the morning on November 11th, 1997, she decides
+                            to die. She takes an overdose of sleeping pills, only to wake up some time later in
+                            Villette, the local hospital. There she is told that although she is alive, now her heart is
+                            damaged and she has only a few days to live...
+
+                            This story follows Veronika through ...</p> <span><a href="#" id="readmore">Read more</a> <a
+                                href="#" id="readmore" style="display: none;">Read less</a></span>
+                    </div>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3 col-12 col-pull-12 booksmandala-price-content book-price-section">
+                <div data-v-cb98e87a="" class="price-container d-flex align-items-center flex-column">
+                    <h4 data-v-cb98e87a="" class="price">NPR. 638.00</h4> <!---->
+                    <hr data-v-cb98e87a=""> <a data-v-cb98e87a=""
+                        href="https://booksmandala.com/categories/used-books"><!----></a>
+                    <p data-v-cb98e87a="" class="shipping-status pt-2 mb-3"> Delivery to most major cities inside Nepal
+                    </p>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

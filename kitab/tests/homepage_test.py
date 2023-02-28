@@ -1,7 +1,8 @@
 from django.test import TestCase, SimpleTestCase
 from django.urls import reverse, resolve
 
-from .views import HomePageView
+from ..views import HomePageView
+
 
 class HomePageTests(SimpleTestCase):
 
@@ -24,3 +25,5 @@ class HomePageTests(SimpleTestCase):
     def test_homepage_url_resolves_homepage_view(self):
         view = resolve('/')
         self.assertEqual(view.func.__name__, HomePageView.as_view().__name__)
+
+
