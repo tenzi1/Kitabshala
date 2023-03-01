@@ -23,7 +23,11 @@
                             <a class="kitab-detail-link" href="{{ kitab.get_absolute_url }}" style="text-decoration:none;color:black;">
                             <h5 class="card-title">{{ kitab.title|truncatechars:18}}</h5>
                             </a>
-                            <p class="card-text"> by {{ kitab.author }}</p>
+                            
+                            <p class="card-text"> by
+                                {% for author in kitab.authors.all %}  {{ author.full_name }},
+                            {% endfor %}
+                            </p>
                             <p class="card-text price">NRS {{ kitab.price}}</p>
 
                         </div>
@@ -57,7 +61,9 @@
                         <a class="kitab-detail-link" href="#" style="text-decoration:none;color:black;">
                             <h5 class="card-title">{{ kitab.title|truncatechars:18}}</h5>
                         </a>
-                        <p class="card-text"> by {{ kitab.author }}</p>
+                        {% for author in kitab.authors.all %}
+                        <p class="card-text"> by {{ author}}</p>
+                        {% endfor %}
                         <p class="card-text price">NRS {{ kitab.price}}</p>
         
                     </div>
