@@ -1,17 +1,18 @@
-
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-.navbar{
+
+.navbar {
     background-color: white;
 }
+
 .navbar-brand {
     font-weight: bold;
     font-size: 2rem;
     letter-spacing: .2rem;
-    color:rgb(8, 128, 150);
+    color: rgb(8, 128, 150);
 }
 
 .nav-link {
@@ -19,22 +20,23 @@
     font-weight: 500;
 }
 
-.books{
+.books {
     margin: 1.5rem 0 2.5rem 0;
 }
+
 .card-title {
     margin-bottom: 0;
 }
 
 .card-text {
-    margin:0;
+    margin: 0;
 }
 
-.price{
+.price {
     font-weight: 500;
 }
 
-.card-btn{
+.card-btn {
     border: 1px solid grey;
     width: 100%;
     margin-top: 1.5rem;
@@ -53,12 +55,12 @@ ul {
     list-style-type: none;
 }
 
-li a{
+li a {
     text-decoration: none;
     color: black;
 }
 
-.footer{
+.footer {
     background-color: rgb(8, 128, 150);
     height: 100vh;
     overflow: hidden;
@@ -69,14 +71,18 @@ li a{
     font-size: 1.5rem;
 }
 
-.footer-title, .footer-text, .footer-nav a{
+.footer-title,
+.footer-text,
+.footer-nav a {
     color: white;
 }
 
-.wrap{
+.wrap {
     padding: 1rem 0;
 }
 
-.kitab-img{
-    opacity:0.5;
+.kitab-img:hover,
+.kitab-img:focus {
+
+    box-shadow: 5px 5px 5px #888888;
 }

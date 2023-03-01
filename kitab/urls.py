@@ -8,5 +8,6 @@ urlpatterns = [
     path("kitab/<slug:slug>/", views.KitabDetailView.as_view(), name="kitab_detail"),
 
     path("category/<slug:slug>/", views.CategoryDetailView.as_view(), name="category_detail"),
+    path("search/", views.FilterSearchView.as_view(), name='search_results' )
 
 ]

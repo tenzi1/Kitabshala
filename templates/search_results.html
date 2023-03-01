@@ -1,0 +1,44 @@
+{% extends '_base.html'%} {% block title %}Search Results {% endblock %} {%block content %}
+<div class="container-fluid">
+  <div class="row gx-3">
+    {% if kitab_list %} {% for kitab in kitab_list %}
+    <div class="col">
+      <div class="p-3">
+        <div class="kitab-img" style="width: 12rem">
+          <a href="{{ kitab.get_absolute_url }}">
+            {% if kitab.cover %}
+            <img
+              src="{{ kitab.cover.url }}"
+              class="card-img-top"
+              alt="..."
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title="{{ kitab.title }}"
+              style="height: 273px; object-fit: cover"
+            />
+            {% endif %}
+          </a>
+          <div>
+            <a
+              class="kitab-detail-link"
+              href="{{ kitab.get_absolute_url }}"
+              style="text-decoration: none; color: black"
+            >
+              <h5 class="card-title">{{ kitab.title|truncatechars:18}}</h5>
+            </a>
+
+            <p class="card-text">
+              by {% for author in kitab.authors.all %} {{ author.full_name }},
+              {% endfor %}
+            </p>
+            <p class="card-text price">NRS {{ kitab.price}}</p>
+          </div>
+
+          <a href="#" class="btn card-btn">Add To Cart</a>
+        </div>
+      </div>
+    </div>
+    {% endfor%} {% else %} No corresponding books are found!!! {% endif %}
+  </div>
+</div>
+{% endblock %}
